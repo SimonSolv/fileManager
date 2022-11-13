@@ -1,11 +1,30 @@
 import UIKit
 import SnapKit
 
-class MainViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class MainViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate, CoordinatedProtocol {
     
-    var dataFiles: [Int:[String:UIImage]] = [:]
+    var dataFiles: [ImageData] = []
  
     var imagePicker = UIImagePickerController()
+    
+    var coordinator: AppCoordinator
+    
+    let userDefaults = UserDefaults.standard
+    
+    var sortType: SortType? = {
+        let sort = UserDefaults.standard.object(forKey: "sort") as? String
+        if sort != nil {
+            if sort == "AZ" {
+                return .AZ
+            } else if sort == "ZA" {
+                return .ZA
+            } else {
+                return nil
+            }
+        } else {
+            return nil
+        }
+    }()
     
     private let sectionInsets = UIEdgeInsets(
       top: 50.0,
@@ -24,16 +43,38 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate & UI
     }()
     
 //MARK: Lifecycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.sortPhotosAZ(notification:)),
+                                               name: Notification.Name("AZ"),
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.sortPhotosZA(notification:)),
+                                               name: Notification.Name("ZA"),
+                                               object: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataFiles = getFiles()
+        let sort = userDefaults.object(forKey: "sort") as? String
+        dataFiles = getFiles(sortedBy: self.sortType ?? .AZ)
+
         self.title = "File Manager"
         self.view.backgroundColor = .white
         setupViews()
         setupConstraints()
     }
-
+    
+    init(coordinator: AppCoordinator) {
+        self.coordinator = coordinator
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 //MARK: Setup
     func setupViews() {
         self.view.addSubview(self.collectionView)
@@ -67,7 +108,12 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate & UI
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             saveImage(image: pickedImage)
-            updateCollectionView()
+            guard self.sortType != nil else {
+                updateCollectionView()
+                return
+            }
+            sortPhotosBy(sortType: self.sortType!)
+            self.updateCollectionView()
         }
         dismiss(animated: true, completion: nil)
     }
@@ -80,10 +126,38 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate & UI
     }
     
     func updateCollectionView() {
-        self.dataFiles = getFiles()
+        self.dataFiles = getFiles(sortedBy: self.sortType ?? .AZ)
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }
+    }
+    // Sorting photoFiles
+    
+    func sortPhotosBy(sortType: SortType) {
+        switch sortType {
+        case .AZ:
+            sortPhotos(data: dataFiles, sorting: .AZ) { data in
+                self.dataFiles = data
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            }
+        case .ZA:
+            sortPhotos(data: dataFiles, sorting: .ZA) { data in
+                self.dataFiles = data
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            }
+        }
+    }
+    @objc func sortPhotosAZ(notification: NSNotification) {
+        self.sortType = .AZ
+        sortPhotosBy(sortType: .AZ)
+    }
+    @objc func sortPhotosZA(notification: NSNotification) {
+        self.sortType = .ZA
+        sortPhotosBy(sortType: .ZA)
     }
     
 }
@@ -129,9 +203,8 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, performPrimaryActionForItemAt indexPath: IndexPath) {
         let alertVC = UIAlertController(title: "Warning!", message: "Do you really want to delete this image?", preferredStyle: .alert )
         let okAction = UIAlertAction(title: "Ok", style: .destructive, handler: {(_: UIAlertAction!) in
-            for i in self.dataFiles[indexPath.row]!.keys {
-                deleteImage(name: i)
-            }
+            let name = self.dataFiles[indexPath.row].imageName
+            deleteImage(name: name)
             self.updateCollectionView()
         })
         let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: {(_: UIAlertAction!) in })

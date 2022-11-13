@@ -21,13 +21,10 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    var sourse: [String: UIImage]? {
+    var sourse: ImageData? {
         didSet {
-            for i in sourse!.keys {
-                imageView.image = sourse![i]
-                fileNameLabel.text = i
-            }
-            
+            imageView.image = sourse!.image
+            fileNameLabel.text = sourse?.imageName
         }
     }
     

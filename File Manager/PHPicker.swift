@@ -24,12 +24,12 @@ class MyViewController: UIViewController, PHPickerViewControllerDelegate {
         print(results)
         
         for result in results {
-            print(result.assetIdentifier)
-            print(result.itemProvider)
+//            print(result.assetIdentifier)
+//            print(result.itemProvider)
             
             result.itemProvider.loadObject(ofClass: UIImage.self, completionHandler: { (object, error) in
-                print(object)
-                print(error)
+//                print(object)
+//                print(error)
                 if let image = object as? UIImage {
                     DispatchQueue.main.async {
                         let imv = self.newImageView(image: image)
