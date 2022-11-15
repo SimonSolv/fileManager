@@ -7,24 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE3AE3B6291AD8EE00966D97 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3AE3B5291AD8EE00966D97 /* AppCoordinator.swift */; };
+		CE3AE3B8291AD91800966D97 /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3AE3B7291AD91800966D97 /* ModuleFactory.swift */; };
+		CE3AE3BA291ADB3900966D97 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3AE3B9291ADB3900966D97 /* LoginViewController.swift */; };
+		CE3AE3BC291C192400966D97 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3AE3BB291C192400966D97 /* SettingsViewController.swift */; };
+		CE3AE3BE291D783700966D97 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3AE3BD291D783700966D97 /* Model.swift */; };
 		CEA7306229044FFB00621C4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7306129044FFB00621C4E /* AppDelegate.swift */; };
 		CEA7306429044FFB00621C4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7306329044FFB00621C4E /* SceneDelegate.swift */; };
 		CEA7306C29044FFB00621C4E /* File_Manager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEA7306A29044FFB00621C4E /* File_Manager.xcdatamodeld */; };
 		CEA7306E29044FFB00621C4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA7306D29044FFB00621C4E /* Assets.xcassets */; };
 		CEA7307129044FFB00621C4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA7306F29044FFB00621C4E /* LaunchScreen.storyboard */; };
-		CEA7307A290450B900621C4E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CEA73079290450B900621C4E /* SnapKit */; };
 		CEA7307C2904524300621C4E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7307B2904524300621C4E /* MainViewController.swift */; };
 		CEA7307E29045D2000621C4E /* PHPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7307D29045D2000621C4E /* PHPicker.swift */; };
 		CEA730802904601A00621C4E /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7307F2904601A00621C4E /* PhotoCollectionViewCell.swift */; };
 		CEA730822904675000621C4E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA730812904675000621C4E /* ImagePicker.swift */; };
 		CEA730842904719D00621C4E /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA730832904719D00621C4E /* FileManager.swift */; };
-		CFBC5E52F07A308155DB7E08 /* Pods_File_Manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BF10C367AC16FBD186C5A0D /* Pods_File_Manager.framework */; };
+		CEE5C09F29212A6D003E8429 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = CEE5C09E29212A6D003E8429 /* KeychainAccess */; };
+		CEE5C0A229212A87003E8429 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CEE5C0A129212A87003E8429 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		503B7541DA58FF9010CF6C8E /* Pods-File Manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-File Manager.debug.xcconfig"; path = "Target Support Files/Pods-File Manager/Pods-File Manager.debug.xcconfig"; sourceTree = "<group>"; };
-		84B8C5957DE67F556000B795 /* Pods-File Manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-File Manager.release.xcconfig"; path = "Target Support Files/Pods-File Manager/Pods-File Manager.release.xcconfig"; sourceTree = "<group>"; };
-		8BF10C367AC16FBD186C5A0D /* Pods_File_Manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_File_Manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3AE3B5291AD8EE00966D97 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		CE3AE3B7291AD91800966D97 /* ModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
+		CE3AE3B9291ADB3900966D97 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CE3AE3BB291C192400966D97 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CE3AE3BD291D783700966D97 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		CEA7305E29044FFB00621C4E /* File Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "File Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA7306129044FFB00621C4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEA7306329044FFB00621C4E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,8 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEA7307A290450B900621C4E /* SnapKit in Frameworks */,
-				CFBC5E52F07A308155DB7E08 /* Pods_File_Manager.framework in Frameworks */,
+				CEE5C09F29212A6D003E8429 /* KeychainAccess in Frameworks */,
+				CEE5C0A229212A87003E8429 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,19 +62,8 @@
 		2E9BFA9AE425F545EEC9E702 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8BF10C367AC16FBD186C5A0D /* Pods_File_Manager.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		49486D6C418B909CE921E3FE /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				503B7541DA58FF9010CF6C8E /* Pods-File Manager.debug.xcconfig */,
-				84B8C5957DE67F556000B795 /* Pods-File Manager.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		CEA7305529044FFB00621C4E = {
@@ -75,7 +71,6 @@
 			children = (
 				CEA7306029044FFB00621C4E /* File Manager */,
 				CEA7305F29044FFB00621C4E /* Products */,
-				49486D6C418B909CE921E3FE /* Pods */,
 				2E9BFA9AE425F545EEC9E702 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -92,8 +87,12 @@
 			isa = PBXGroup;
 			children = (
 				CEA7306129044FFB00621C4E /* AppDelegate.swift */,
+				CE3AE3B5291AD8EE00966D97 /* AppCoordinator.swift */,
 				CEA7306329044FFB00621C4E /* SceneDelegate.swift */,
+				CE3AE3B7291AD91800966D97 /* ModuleFactory.swift */,
 				CEA7307B2904524300621C4E /* MainViewController.swift */,
+				CE3AE3BB291C192400966D97 /* SettingsViewController.swift */,
+				CE3AE3B9291ADB3900966D97 /* LoginViewController.swift */,
 				CEA730832904719D00621C4E /* FileManager.swift */,
 				CEA7307F2904601A00621C4E /* PhotoCollectionViewCell.swift */,
 				CEA7306D29044FFB00621C4E /* Assets.xcassets */,
@@ -102,6 +101,7 @@
 				CEA7306A29044FFB00621C4E /* File_Manager.xcdatamodeld */,
 				CEA7307D29045D2000621C4E /* PHPicker.swift */,
 				CEA730812904675000621C4E /* ImagePicker.swift */,
+				CE3AE3BD291D783700966D97 /* Model.swift */,
 			);
 			path = "File Manager";
 			sourceTree = "<group>";
@@ -113,11 +113,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEA7307529044FFB00621C4E /* Build configuration list for PBXNativeTarget "File Manager" */;
 			buildPhases = (
-				7A575751AD34EAF565686349 /* [CP] Check Pods Manifest.lock */,
 				CEA7305A29044FFB00621C4E /* Sources */,
 				CEA7305B29044FFB00621C4E /* Frameworks */,
 				CEA7305C29044FFB00621C4E /* Resources */,
-				B9AEB0F50ECC2F3ECDFA5057 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,7 +123,8 @@
 			);
 			name = "File Manager";
 			packageProductDependencies = (
-				CEA73079290450B900621C4E /* SnapKit */,
+				CEE5C09E29212A6D003E8429 /* KeychainAccess */,
+				CEE5C0A129212A87003E8429 /* SnapKit */,
 			);
 			productName = "File Manager";
 			productReference = CEA7305E29044FFB00621C4E /* File Manager.app */;
@@ -156,7 +155,8 @@
 			);
 			mainGroup = CEA7305529044FFB00621C4E;
 			packageReferences = (
-				CEA73078290450B900621C4E /* XCRemoteSwiftPackageReference "SnapKit.git" */,
+				CEE5C09D29212A6D003E8429 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				CEE5C0A029212A87003E8429 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = CEA7305F29044FFB00621C4E /* Products */;
 			projectDirPath = "";
@@ -179,48 +179,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		7A575751AD34EAF565686349 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-File Manager-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B9AEB0F50ECC2F3ECDFA5057 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-File Manager/Pods-File Manager-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-File Manager/Pods-File Manager-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-File Manager/Pods-File Manager-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		CEA7305A29044FFB00621C4E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -228,12 +186,17 @@
 			files = (
 				CEA7306229044FFB00621C4E /* AppDelegate.swift in Sources */,
 				CEA7306429044FFB00621C4E /* SceneDelegate.swift in Sources */,
+				CE3AE3B8291AD91800966D97 /* ModuleFactory.swift in Sources */,
 				CEA7306C29044FFB00621C4E /* File_Manager.xcdatamodeld in Sources */,
 				CEA730822904675000621C4E /* ImagePicker.swift in Sources */,
 				CEA7307C2904524300621C4E /* MainViewController.swift in Sources */,
+				CE3AE3BE291D783700966D97 /* Model.swift in Sources */,
 				CEA7307E29045D2000621C4E /* PHPicker.swift in Sources */,
+				CE3AE3B6291AD8EE00966D97 /* AppCoordinator.swift in Sources */,
 				CEA730802904601A00621C4E /* PhotoCollectionViewCell.swift in Sources */,
 				CEA730842904719D00621C4E /* FileManager.swift in Sources */,
+				CE3AE3BA291ADB3900966D97 /* LoginViewController.swift in Sources */,
+				CE3AE3BC291C192400966D97 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +264,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -355,7 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -367,7 +330,6 @@
 		};
 		CEA7307629044FFB00621C4E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 503B7541DA58FF9010CF6C8E /* Pods-File Manager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -376,6 +338,7 @@
 				DEVELOPMENT_TEAM = TDYKKCNQAF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "File Manager/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -395,7 +358,6 @@
 		};
 		CEA7307729044FFB00621C4E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84B8C5957DE67F556000B795 /* Pods-File Manager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -404,6 +366,7 @@
 				DEVELOPMENT_TEAM = TDYKKCNQAF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "File Manager/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -445,7 +408,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CEA73078290450B900621C4E /* XCRemoteSwiftPackageReference "SnapKit.git" */ = {
+		CEE5C09D29212A6D003E8429 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		CEE5C0A029212A87003E8429 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -456,9 +427,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CEA73079290450B900621C4E /* SnapKit */ = {
+		CEE5C09E29212A6D003E8429 /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CEA73078290450B900621C4E /* XCRemoteSwiftPackageReference "SnapKit.git" */;
+			package = CEE5C09D29212A6D003E8429 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+		CEE5C0A129212A87003E8429 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEE5C0A029212A87003E8429 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */

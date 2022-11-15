@@ -1,8 +1,8 @@
 import Foundation
 import UIKit
 
-func getFiles() -> [Int:[String: UIImage]] {
-    var files: [Int:[String: UIImage]] = [:]
+func getFiles(sortedBy: SortType) -> [ImageData] {
+    var files: [ImageData] = []
     var index = 0
     let documentsURL: URL
     do {
@@ -12,8 +12,8 @@ func getFiles() -> [Int:[String: UIImage]] {
             for file in contents {
                 let imageName = documentsURL.appendingPathComponent(file.path).lastPathComponent
                 let image = getSavedImage(named: imageName)!
-                let item = [imageName: image]
-                files[index] = item
+                let item = ImageData(image: image, imageName: imageName)
+                files.append(item)
                 index += 1
             }
         } catch {
@@ -21,6 +21,16 @@ func getFiles() -> [Int:[String: UIImage]] {
         }
     } catch {
         print(error.localizedDescription)
+    }
+    switch sortedBy {
+    case .AZ:
+        sortPhotos(data: files, sorting: .AZ) { data in
+            files = data
+        }
+    case .ZA:
+        sortPhotos(data: files, sorting: .ZA) { data in
+            files = data
+        }
     }
     return files
 }
@@ -68,5 +78,20 @@ func deleteImage(name: String) -> Bool {
     } catch {
         print(error.localizedDescription)
         return false
+    }
+}
+
+enum SortType {
+    case AZ, ZA
+}
+
+func sortPhotos(data: [ImageData],sorting: SortType, completion: (_ data: [ImageData]) -> Void) {
+    switch sorting {
+    case .AZ:
+        let output: [ImageData] = data.sorted(by: { $0.imageName < $1.imageName })
+        return completion(output)
+    case .ZA:
+        let output: [ImageData] = data.sorted(by: { $0.imageName > $1.imageName })
+        return completion(output)
     }
 }
